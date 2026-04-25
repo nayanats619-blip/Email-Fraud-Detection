@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Email Fraud Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+
+<!-- Animated background -->
+<div class="bg"></div>
+<div class="bg-gradient"></div>
+
+<!-- Top Navigation -->
+<div class="top-nav">
+    <button onclick="window.location.href='/'" class="nav-btn">Detector</button>
+    <button onclick="window.location.href='/about'" class="nav-btn">About</button>
+    <button onclick="window.location.href='/history'" class="nav-btn">History</button>
+    <button onclick="window.location.href='/statistics'" class="nav-btn">Statistics</button>
+    <button onclick="window.location.href='/dashboard'" class="nav-btn active">Dashboard</button>
+    <button onclick="window.location.href='/alerts'" class="nav-btn">Alerts</button>
+
+</div>
+
+<!-- Header -->
+<div class="header">
+    <h1>Executive Dashboard</h1>
+</div>
+
+<!-- Main Container -->
+<div class="dashboard-main" style="position: relative; z-index: 10; max-width: 1400px; margin: 0 auto; padding: 30px 20px;">
+
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+        <div class="welcome-content">
+            <h2>Welcome to Your Security Dashboard</h2>
+            <p>Real-time monitoring and analysis of your email security</p>
+        </div>
+        <button onclick="loadDashboard()" class="btn-refresh">🔄 Refresh Data</button>
+    </div>
+
+    <!-- KPI Cards Row 1 -->
+    <div class="kpi-grid">
+        <div class="kpi-card total">
+            <div class="kpi-icon">📧</div>
+            <div class="kpi-content">
+                <div class="kpi-label">Total Analyzed</div>
+                <div class="kpi-number" id="totalEmails" data-value="0">0</div>
+                <div class="kpi-trend" id="totalTrend">↗ 100%</div>
+            </div>
+            <div class="kpi-progress"></div>
+        </div>
+
+        <div class="kpi-card safe">
+            <div class="kpi-icon">✅</div>
+            <div class="kpi-content">
+                <div class="kpi-label">Safe Emails</div>
+                <div class="kpi-number" id="safeEmails" data-value="0">0</div>
+                <div class="kpi-percentage" id="safePercent">0%</div>
+            </div>
+            <div class="kpi-progress"></div>
+        </div>
+
+        <div class="kpi-card fraud">
+            <div class="kpi-icon">🚫</div>
+            <div class="kpi-content">
+                <div class="kpi-label">Fraud Detected</div>
+                <div class="kpi-number" id="fraudEmails" data-value="0">0</div>
+                <div class="kpi-percentage" id="fraudPercent">0%</div>
+            </div>
+            <div class="kpi-progress"></div>
+        </div>
+
+        <div class="kpi-card suspicious">
+            <div class="kpi-icon">⚠️</div>
+            <div class="kpi-content">
+                <div class="kpi-label">Suspicious</div>
+                <div class="kpi-number" id="suspiciousEmails" data-value="0">0</div>
+                <div class="kpi-percentage" id="suspPercent">0%</div>
+            </div>
+            <div class="kpi-progress"></div>
+        </div>
+    </div>
+
+    <!-- Analytics Section -->
+    <div class="analytics-grid">
+        <div class="chart-card">
+            <h3>📈 Classification Overview</h3>
+            <canvas id="classificationChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>📊 Risk Distribution</h3>
+            <canvas id="riskChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Metrics Section -->
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <h3>🎯 Performance Metrics</h3>
+            <div class="metrics-list">
+                <div class="metric-item">
+                    <span class="metric-label">Average Risk Score</span>
+                    <div class="metric-bar">
+                        <div class="metric-fill" id="avgRiskBar" style="width: 0%"></div>
+                    </div>
+                    <span class="metric-value" id="avgRisk">0</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Detection Rate</span>
+                    <div class="metric-bar">
+                        <div class="metric-fill" id="detectionBar" style="width: 0%"></div>
+                    </div>
+                    <span class="metric-value" id="detectionRate">0%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Highest Risk Detected</span>
+                    <span class="metric-value" id="maxRisk">0</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Total Senders</span>
+                    <span class="metric-value" id="totalSenders">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="metric-card">
+            <h3>🔝 Top Threat Senders</h3>
+            <div id="topSenders" class="senders-list"></div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="recent-activity-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3>⏰ Recent Analysis Activity</h3>
+            <button onclick="loadDashboard()" class="btn-small">🔄 Refresh</button>
+        </div>
+        <div id="recentList" class="recent-list"></div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; margin-top: 40px; padding: 20px; color: var(--text-muted); font-size: 0.9rem;">
+        <p>Last updated: <span id="lastUpdate">Just now</span></p>
+        <p style="font-size: 0.85rem; margin-top: 10px;">💡 Refresh the dashboard to get the latest data</p>
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

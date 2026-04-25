@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+
+<div class="top-nav">
+    <button onclick="window.location.href='/'" class="nav-btn">Detector</button>
+    <button onclick="window.location.href='/about'" class="nav-btn">About</button>
+    <button onclick="window.location.href='/history'" class="nav-btn">History</button>
+    <button onclick="window.location.href='/statistics'" class="nav-btn active">Statistics</button>
+    <button onclick="window.location.href='/dashboard'" class="nav-btn">Dashboard</button>
+    <button onclick="window.location.href='/alerts'" class="nav-btn">Alerts</button>
+  
+</div>
+
+<div class="header">
+  <h1>📊 Statistics Dashboard</h1>
+</div>
+
+<div id="statusMessage" style="text-align: center; padding: 10px; display: none;"></div>
+<div id="statsContent"></div>
+
+<script src="statistics.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+[
+  {
+    "_id": "1776143195605",
+    "senderEmail": "nayana.ts05@gmail.com",
+    "emailText": "Dear Sir/Madam,\n\nI hope this message finds you well. I am writing to express my interest in applying for an internship opportunity at your organization.\n\nI am currently pursuing my degree and have developed skills in HTML, CSS, JavaScript, Node.js, Python, and SQL. I am eager to apply my knowledge in a practical environment and learn from experienced professionals.\n\nI would be grateful if you could consider my application. Please let me know if any further information is required.\n\nThank you for your time and consideration.\n\nYours sincerely,\nNayana Ts",
+    "status": "Safe",
+    "riskScore": 15,
+    "reasons": [
+      "⚠️ High urgency language detected"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-14T05:06:35.605Z"
+  },
+  {
+    "_id": "1776143616668",
+    "senderEmail": "support-update@secure-bank-alerts.com",
+    "emailText": "Dear Customer,\n\nWe detected unusual activity in your account. Your account will be suspended within 24 hours unless you verify your details immediately.\n\nPlease click the link below to secure your account:\nhttp://secure-bank-verification-alert.com\n\nFailure to act may result in permanent account closure.\n\nThank you,\nCustomer Support Team",
+    "status": "Fraud",
+    "riskScore": 95,
+    "reasons": [
+      "⚠️ Unusual email domain",
+      "⚠️ High urgency language detected",
+      "⚠️ Contains 3 action trigger word(s)",
+      "🚫 Requests for personal/financial information detected",
+      "🔍 Detected keywords: unusual activity, account"
+    ],
+    "keywords": [
+      "unusual activity",
+      "account"
+    ],
+    "createdAt": "2026-04-14T05:13:36.668Z"
+  },
+  {
+    "_id": "1776171351647",
+    "senderEmail": "security-alert@paypaI-verification.com",
+    "emailText": "Dear User,\nYour account has been temporarily limited. Verify now to restore access:\nhttp://fake-paypal-alert.com\nThank you.",
+    "status": "Safe",
+    "riskScore": 35,
+    "reasons": [
+      "⚠️ Unusual email domain",
+      "⚠️ High urgency language detected",
+      "⚠️ Contains 1 action trigger word(s)"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-14T12:55:51.647Z"
+  },
+  {
+    "_id": "1776171355769",
+    "senderEmail": "security-alert@paypaI-verification.com",
+    "emailText": "Dear User,\nYour account has been temporarily limited. Verify now to restore access:\nhttp://fake-paypal-alert.com\nThank you.",
+    "status": "Safe",
+    "riskScore": 35,
+    "reasons": [
+      "⚠️ Unusual email domain",
+      "⚠️ High urgency language detected",
+      "⚠️ Contains 1 action trigger word(s)"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-14T12:55:55.769Z"
+  },
+  {
+    "_id": "1776171356646",
+    "senderEmail": "security-alert@paypaI-verification.com",
+    "emailText": "Dear User,\nYour account has been temporarily limited. Verify now to restore access:\nhttp://fake-paypal-alert.com\nThank you.",
+    "status": "Safe",
+    "riskScore": 35,
+    "reasons": [
+      "⚠️ Unusual email domain",
+      "⚠️ High urgency language detected",
+      "⚠️ Contains 1 action trigger word(s)"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-14T12:55:56.646Z"
+  },
+  {
+    "_id": "1776403069787",
+    "senderEmail": "steena513@gmail.com",
+    "emailText": "how are you",
+    "status": "Safe",
+    "riskScore": 5,
+    "reasons": [
+      "⚠️ Very short email"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-17T05:17:49.788Z"
+  },
+  {
+    "_id": "1776403069982",
+    "senderEmail": "steena513@gmail.com",
+    "emailText": "how are you",
+    "status": "Safe",
+    "riskScore": 5,
+    "reasons": [
+      "⚠️ Very short email"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-17T05:17:49.982Z"
+  },
+  {
+    "_id": "1776403070226",
+    "senderEmail": "steena513@gmail.com",
+    "emailText": "how are you",
+    "status": "Safe",
+    "riskScore": 5,
+    "reasons": [
+      "⚠️ Very short email"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-17T05:17:50.226Z"
+  },
+  {
+    "_id": "1776403099130",
+    "senderEmail": "steena513@gmail.com",
+    "emailText": "how are you",
+    "status": "Safe",
+    "riskScore": 5,
+    "reasons": [
+      "⚠️ Very short email"
+    ],
+    "keywords": [],
+    "createdAt": "2026-04-17T05:18:19.130Z"
+  }
+]

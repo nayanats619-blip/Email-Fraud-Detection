@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History - AI Email Fraud Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animated background -->
+<div class="bg"></div>
+<div class="bg-gradient"></div>
+
+<!-- Top Navigation -->
+<div class="top-nav">
+    <button onclick="window.location.href='/'" class="nav-btn">Detector</button>
+    <button onclick="window.location.href='/about'" class="nav-btn">About</button>
+    <button onclick="window.location.href='/history'" class="nav-btn active">History</button>
+    <button onclick="window.location.href='/statistics'" class="nav-btn">Statistics</button>
+    <button onclick="window.location.href='/dashboard'" class="nav-btn">Dashboard</button>
+    <button onclick="window.location.href='/alerts'" class="nav-btn">Alerts</button>
+    
+</div>
+
+<!-- Header -->
+<div class="header">
+  <h1>📋 Email Analysis History</h1>
+</div>
+
+<!-- Main Container -->
+<div class="main-container history-page">
+  <div class="history-panel">
+    <section class="history-hero">
+      <div class="history-summary">
+        <span class="history-eyebrow">History dashboard</span>
+        <h2>Track every email check and uncover suspicious senders.</h2>
+        <p>Browse your saved email analysis history, review risk trends, and quickly manage any suspicious entries.</p>
+      </div>
+      <div class="history-hero-actions">
+        <button onclick="loadHistory()" class="btn-secondary btn-wide">🔄 Refresh History</button>
+        <button onclick="clearAllHistory()" class="btn-small btn-wide btn-danger">🗑️ Clear All</button>
+      </div>
+    </section>
+
+    <div id="statusMessage" class="status-message"></div>
+
+    <div class="history-highlights">
+      <div class="history-metric-card">
+        <span class="metric-label">Secure Timeline</span>
+        <strong>All your scans saved here</strong>
+      </div>
+      <div class="history-metric-card">
+        <span class="metric-label">Quick Actions</span>
+        <strong>Refresh and clear with one tap</strong>
+      </div>
+      <div class="history-metric-card">
+        <span class="metric-label">Insightful Records</span>
+        <strong>Risk score, sender, date</strong>
+      </div>
+    </div>
+
+    <div id="historyList" class="history-list"></div>
+  </div>
+</div>
+
+<script src="histroy.js"></script>
+<script>
+// Check server on load
+async function checkServerStatus() {
+  try {
+    const res = await fetch("/api/status");
+    if (res.ok) {
+      const data = await res.json();
+      console.log("Server status:", data);
+    }
+  } catch (err) {
+    console.error("Server check failed:", err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  checkServerStatus();
+  loadHistory();
+});
+</script>
+</body>
+</html>

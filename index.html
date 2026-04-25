@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ AI Email Fraud Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animated background -->
+<div class="bg"></div>
+<div class="bg-gradient"></div>
+<div class="top-nav">
+
+    <!-- LEFT SIDE MENU -->
+    <div class="nav-left">
+        <button onclick="window.location.href='index.html'" class="nav-btn">Detector</button>
+        <button onclick="window.location.href='about.html'" class="nav-btn">About</button>
+        <button onclick="window.location.href='history.html'" class="nav-btn">History</button>
+        <button onclick="window.location.href='statistics.html'" class="nav-btn">Statistics</button>
+        <button onclick="window.location.href='dashboard.html'" class="nav-btn">Dashboard</button>
+        <button onclick="window.location.href='alerts.htmlml'" class="nav-btn">Alerts</button>
+    
+    </div>
+
+    <!-- RIGHT SIDE LOGIN -->
+    
+
+</div>div
+
+<!-- Header -->
+<div class="header">
+    <h1>AI Email Fraud Detector</h1>
+</div>
+
+<!-- Main Container -->
+<div class="main-container">
+    
+    <!-- TAB 1: Detector -->
+    <div id="detector" class="tab-content active">
+        <div class="detector-container">
+            <div class="input-section">
+                <h2>Analyze Email</h2>
+                <div class="form-group">
+                    <label for="senderEmail">Sender Email Address:</label>
+                    <input type="email" id="senderEmail" placeholder="e.g., sender@example.com" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailText">Email Content:</label>
+                    <textarea id="emailText" placeholder="Paste the full email content here..." autocomplete="off"></textarea>
+                </div>
+
+                <button onclick="checkEmail()" class="btn-analyze">🔍 Analyze Now</button>
+                <button onclick="clearForm()" class="btn-clear">Clear</button>
+            </div>
+
+            <div id="result" class="result-section">
+                <div style="text-align: center; color: var(--text-muted); padding: 40px 20px;">
+                    <h3 style="margin-bottom: 15px; color: var(--text-light);">Ready to Analyze</h3>
+                    <p>Enter an email above and click "Analyze Now" to get started.</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Results will appear here with risk score, fraud indicators, and analysis details.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 2: History -->
+    <div id="history" class="tab-content">
+        <div class="history-container">
+            <h2>Analysis History</h2>
+            <div class="history-controls">
+                <button onclick="loadHistory()" class="btn-small">🔄 Refresh</button>
+                <button onclick="exportCSV()" class="btn-small">📥 Export CSV</button>
+                <button onclick="clearAllHistory()" class="btn-small btn-danger">🗑️ Clear All</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </div>
+
+    <!-- TAB 3: Statistics -->
+    <div id="stats" class="tab-content">
+        <div class="stats-container">
+            <h2>Statistics Dashboard</h2>
+            <div id="statsContent" class="stats-grid"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
